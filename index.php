@@ -10,20 +10,20 @@
                                         $headers = $_GET["email"] . "\r\n" .
                                             'Reply-To: '.$_GET["email"] . "\r\n" .
                                             'X-Mailer: PHP/' . phpversion();
-
                                         mail($to, $subject, $message, $headers);
-                                        header("location:page.php?type=success&error=bien poster");
+                                        header("location:index.php?type=success&error=bien poster");
+
                                     }
                                     else{
-                                        header("location:page.php?type=danger&error=insert votre message");
+                                        header("location:index.php?type=danger&error=insert votre message");
                                     }
                                 }
                                 else{
-                                    header("location:page.php?type=danger&error=insert votre email");
+                                    header("location:index.php?type=danger&error=insert votre email");
                                 }
                             }
                             else{
-                                header("location: page.php?type=danger&error=insert votre nom");
+                                header("location: index.php?type=danger&error=insert votre nom");
                             }
                         }
                     ?>
@@ -60,7 +60,7 @@
             <div class="lds-ripple"><div></div><div></div></div>
         </div>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="page.php">rebouli saif eddine</a>
+          <a class="navbar-brand" href="index.php">rebouli saif eddine</a>
           <button id="navbar-toggler"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             
@@ -203,7 +203,7 @@
                     
         <div class="contact-me">
             <div class="content-fluid">
-                    <form action="page.php" method="get">
+                    <form action="index.php" method="get">
                         <div class="row">
                             <div class="col-lg-3 offset-lg-3">
                             <input type="text" name="name" class="form-control-lg " id="user-name" placeholder="name"><br/>
